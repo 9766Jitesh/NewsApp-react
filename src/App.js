@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Navbar from './component/Navbar'
 import NewsHeading from './component/NewsHeading'
 import NewsItem from './component/NewsItem'
-import Loading from './component/Loading'
 
 export default class App extends Component {
   render() {
