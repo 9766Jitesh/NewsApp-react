@@ -12,7 +12,8 @@ export default class NewsItem extends Component {
         };
     }
     async componentDidMount(){
-        let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&apiKey=b9f878f448a94b789224aa1f10e01640&page=1&pageSize=${this.props.pageSize}`;
+        let url=`https://newsdata.io/api/1/news?apikey=pub_160495889c8111b1c32fa776c57588b46d276&country=${this.props.country}`;
+        //let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&apiKey=b9f878f448a94b789224aa1f10e01640&page=1`;
         this.setState({loading:true})
         let data=await fetch(url);
         let res= await data.json();
