@@ -30,6 +30,7 @@ export default class NewsItem extends Component {
         console.log("next")
         if(!(this.state.page+1>Math.ceil(this.state.totalArticles/this.props.pageSize))){
         let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&apiKey=b9f878f448a94b789224aa1f10e01640&page=${this.state.page+1}&pageSize=${this.props.pageSize}`;
+        //let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&apiKey=b9f878f448a94b789224aa1f10e01640&page=${this.state.page+1}&pageSize=${this.props.pageSize}`;
         this.setState({loading:true})
         let data=await fetch(url);
         let res= await data.json();
